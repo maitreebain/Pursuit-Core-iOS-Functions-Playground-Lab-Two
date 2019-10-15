@@ -5,13 +5,15 @@ import UIKit
 // Write a function named average(of:) that returns the average of an array of Doubles
 
 // Your function here
-func average(output:Double, input:Double) -> Double {
-    let input = Array()
-    let output = Array()
-    let sum = (input + output)/2
-    return sum
+//Attempt
+func average(input: [Double]) -> Double {
+    for num in input{
+        let sum = Double(input.count) / num
+        return sum
+    }
 }
 
+average(input: [1,2,3,4,5])
 
 let testCasesOne: [([Double], Double)] = [
     (input: [1,2,3,4,5], expectedOutput: 3),
@@ -30,6 +32,16 @@ let testCasesOne: [([Double], Double)] = [
 // Write a function named frequencyDictionary(of:) that takes a String as input and returns a dictionary that maps each character its number of occurrances
 
 // Your function here
+//func frequencyDictionary(of input: String) -> [Character:Int] {
+//    var firstDictionary: [Character:Int]
+//
+//    for (key, value) in firstDictionary.count {
+//
+//    }
+//    return firstDictionary
+//}
+//
+//frequencyDictionary(of: "hello")
 
 let testCasesTwo: [(String, [Character: Int])] = [
     (input: "hello", expectedOutput: ["h": 1, "e": 1, "l": 2, "o": 1]),
