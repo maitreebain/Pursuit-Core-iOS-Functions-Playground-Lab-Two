@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 // Question One
 
@@ -6,14 +6,17 @@ import UIKit
 
 // Your function here
 //Attempt
-func average(input: [Double]) -> Double {
-    for num in input{
-        let sum = Double(input.count) / num
-        return sum
-    }
-}
-
-average(input: [1,2,3,4,5])
+//func average(input: [Double]) -> Double {
+//    for num in input{
+//        let sum = Double(input.count) / num
+//        return Double(sum)
+//}
+//    return sum
+//}
+//average(input: [1,2,3,4,5])
+//average(input: [1,42,1,541,42,6])
+//average(input: [-10,5,-15,20])
+//average(input: [1.5, 2.25, 4.5, -1.5])
 
 let testCasesOne: [([Double], Double)] = [
     (input: [1,2,3,4,5], expectedOutput: 3),
@@ -33,15 +36,19 @@ let testCasesOne: [([Double], Double)] = [
 
 // Your function here
 //func frequencyDictionary(of input: String) -> [Character:Int] {
-//    var firstDictionary: [Character:Int]
+//    var firstDictionary = [Character:Int]()
 //
-//    for (key, value) in firstDictionary.count {
-//
+//    for word in firstDictionary {
+//        if let count = firstDictionary[word].count {
+//            firstDictionary[word] += 1
+//        } else  {
+//            firstDictionary[word] = 1
+//        }
 //    }
 //    return firstDictionary
 //}
-//
-//frequencyDictionary(of: "hello")
+
+frequencyDictionary(of: "hello")
 
 let testCasesTwo: [(String, [Character: Int])] = [
     (input: "hello", expectedOutput: ["h": 1, "e": 1, "l": 2, "o": 1]),
@@ -64,6 +71,11 @@ let testCasesTwo: [(String, [Character: Int])] = [
 // If the number is a multiple of 3 AND 5, replace it with "FizzBuzz"
 
 // Your function here
+
+func fizzBuzz (upto : [String]) -> [String] {
+    
+}
+
 
 let testCasesThree = [
     (input: 20, expectedOutput: ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz", "16", "17", "Fizz", "19", "Buzz"]),
