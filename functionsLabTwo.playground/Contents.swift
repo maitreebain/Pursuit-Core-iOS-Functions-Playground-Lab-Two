@@ -34,20 +34,21 @@ for (input, expectedOutput) in testCasesOne {
 // Write a function named frequencyDictionary(of:) that takes a String as input and returns a dictionary that maps each character its number of occurrances
 
 // Your function here
-//func frequencyDictionary(of input: String) -> [Character:Int] {
-//    var firstDictionary = [Character:Int]()
-//
-//    for word in firstDictionary {
-//        if let count = firstDictionary[word].count {
-//            firstDictionary[word] += 1
-//        } else  {
-//            firstDictionary[word] = 1
-//        }
-//    }
-//    return firstDictionary
-//}
+func frequencyDictionary(of input: String) -> [Character:Int] {
+var firstDictionary = [Character:Int]()
+var wordCount = 0
+    
+    for char in input {
+        if let wordCount = firstDictionary[char] {
+            firstDictionary[char] = wordCount + 1
+        } else {
+            firstDictionary[char] = 1
+    }
+    }
+    return firstDictionary
 
-frequencyDictionary(of: "hello")
+}
+
 
 let testCasesTwo: [(String, [Character: Int])] = [
     (input: "hello", expectedOutput: ["h": 1, "e": 1, "l": 2, "o": 1]),
@@ -55,10 +56,10 @@ let testCasesTwo: [(String, [Character: Int])] = [
     (input: "More words", expectedOutput: ["M": 1, "o": 2, "r": 2, "e": 1, " ": 1, "w": 1, "d": 1, "s": 1])
 ]
 
-//for (input, expectedOutput) in testCasesTwo {
-//    let output = frequencyDictionary(of: input)
-//    assert(output == expectedOutput, "Was expecting \(expectedOutput) for input \(input), but got \(output)")
-//}
+for (input, expectedOutput) in testCasesTwo {
+    let output = frequencyDictionary(of: input)
+    assert(output == expectedOutput, "Was expecting \(expectedOutput) for input \(input), but got \(output)")
+}
 
 
 // Question Three
@@ -110,10 +111,19 @@ for (input, expectedOutput) in testCasesThree {
 
 // Your function here
 
-func value(_: [Double], isGreaterThanAverageOf: Double) -> Double {
-
-    
-}
+//func value(_ inputOne: [Double], isGreaterThanAverageOf inputTwo: Double) -> Bool {
+//
+//
+//
+//    for num in inputOne{
+//        if  {
+//
+//        }
+//    }
+//
+//
+//    return true
+//}
 
 let testCasesFour = [
     (inputOne: 4.0, inputTwo: [1.0,2,3,4,5], expectedOutput: true),
@@ -132,12 +142,12 @@ let testCasesFour = [
 
 // Write a function that finds the second smallest Int an an array of Ints
 
-func smallestInt(input: [Double]) -> Double {
-    for num in input{
-        
-    }
-    
-}
+//func smallestInt(input: [Double]) -> Double {
+//    for num in input{
+//
+//    }
+//
+//}
 
 // Your function here
 
